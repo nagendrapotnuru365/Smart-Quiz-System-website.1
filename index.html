@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Quiz System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">SmartQuiz</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#subjects">Subjects</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+    <div class="hero-content">
+        <h1>Learn. Practice. Improve.</h1>
+
+        <p>
+            Test your knowledge with our interactive Smart Quiz System.
+        </p>
+
+        <a href="#subjects" class="btn">
+            Start Quiz
+        </a>
+    </div>
+
+</section>
+
+<section id="subjects" class="subjects">
+
+    <h2>Choose Your Subject</h2>
+
+    <div class="subject-container">
+
+        <div class="subject-card">
+            <h3>Mathematics</h3>
+            <p>Test your mathematical skills.</p>
+            <button onclick="startQuiz('math')">
+                Start Quiz
+            </button>
+        </div>
+
+        <div class="subject-card">
+            <h3>Science</h3>
+            <p>Test your science knowledge.</p>
+            <button onclick="startQuiz('science')">
+                Start Quiz
+            </button>
+        </div>
+
+        <div class="subject-card">
+            <h3>General Knowledge</h3>
+            <p>Improve your general awareness.</p>
+            <button onclick="startQuiz('gk')">
+                Start Quiz
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="about" class="about">
+
+    <h2>About SmartQuiz</h2>
+
+    <p>
+        SmartQuiz is an educational platform designed to help
+        students learn through interactive quizzes and instant feedback.
+    </p>
+
+</section>
+
+<footer>
+    <p>© 2026 SmartQuiz. All Rights Reserved.</p>
+</footer>
+
+<script>
+function startQuiz(subject) {
+    localStorage.setItem("selectedSubject", subject);
+    window.location.href = "quiz.html";
+}
+</script>
+
+</body>
+</html>
